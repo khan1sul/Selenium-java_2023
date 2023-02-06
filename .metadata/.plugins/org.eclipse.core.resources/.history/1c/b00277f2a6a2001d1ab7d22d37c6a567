@@ -1,0 +1,32 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import test.BaseTest;
+
+public class LoginPage {
+	
+	By username = By.xpath("//input[@id='swpm_user_name']");
+	By password = By.xpath("//input[@id='swpm_password']");
+	public void loginWithInvildEmailInvildPassword() {
+		BaseTest.driver.findElement(username).sendKeys("admin");
+		BaseTest.driver.findElement(password).sendKeys("admin");
+		
+	
+	Assert.assertTrue(BaseTest.driver.getCurrentUrl().equals(BaseTest.baseURL));
+	
+	
+//	System.out.println(driver.findElement(username).getAttribute("class"));
+	
+	
+	}
+}
+
+	 	
+	
+
+

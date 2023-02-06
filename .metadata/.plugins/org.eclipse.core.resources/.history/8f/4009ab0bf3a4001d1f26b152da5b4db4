@@ -1,0 +1,45 @@
+package pages;
+
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import test.BaseTest;
+
+public class HomePage {
+
+	
+	@FindBy(xpath="ul[@id='menu-main-menu']/li/a")
+	public List<WebElement>menuOptions;
+	
+//Constructor	
+	public HomePage(){
+		PageFactory.initElements(BaseTest.driver,this);
+	}
+	
+	public void selectMenuOption(String menuOption) {
+		
+		String expectedValue = menuOption.toLowerCase().trim();
+		for(WebElement ele : menuOptions) {
+		String actualValue = ele.getText().toLowerCase().trim();
+			if(actualValue.contains(expectedValue)) {
+			ele.click();
+			break;
+		}
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+}
+	
+	
+}

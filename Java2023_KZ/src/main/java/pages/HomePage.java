@@ -1,0 +1,58 @@
+package pages;
+
+import java.util.List;
+
+import org.openqa.selenium.JavascriptException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import test.BaseTest;
+import utility.UtilityMethods;
+
+public class HomePage {
+
+	
+	@FindBy(xpath="ul[@id='menu-main-menu']/li/a")
+	public List<WebElement>menuOptions;
+	
+//Constructor	
+	public HomePage(){
+		PageFactory.initElements(BaseTest.driver,this);
+	}
+	
+	public void selectMenuOption(String menuOption) {
+		
+		BaseTest.wait.until(ExpectedConditions.visibilityOf(menuOptions.get(0)));
+		String expectedValue = menuOption.toLowerCase().trim();
+		
+		//looping through the list of menu options
+		
+		for(WebElement ele : menuOptions) {
+			
+		String actualValue = ele.getText().toLowerCase().trim();
+		
+		//checking if the menu option from the app matches our expected option
+		
+			if(actualValue.contains(expectedValue)) {
+	//		ele.click();
+			
+			UtilityMethods.jsClick(ele);
+				break;
+		}
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+}
+	
+	
+}

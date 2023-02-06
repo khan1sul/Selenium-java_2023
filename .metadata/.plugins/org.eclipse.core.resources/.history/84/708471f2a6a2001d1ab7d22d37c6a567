@@ -1,0 +1,31 @@
+package test;
+
+ import org.openqa.selenium.By;
+
+
+public class LoginTests exterds BaseTest{
+	
+	
+	@Test
+	Run | Debug
+	public void loginWithInvalidEmailInvalidPassword(){ 
+	
+		LoginPage.LoginPage = new LoginPage();
+		loginPage.login();
+		
+	}
+	
+	@Test
+	Run | Debug
+	public void loginWithInvalidEmailInvalidPassword2(){ {
+	
+		LoginPage.LoginPage = new LoginPage();
+		loginPage.login();
+	
+	
+	
+	
+	
+	
+
+}

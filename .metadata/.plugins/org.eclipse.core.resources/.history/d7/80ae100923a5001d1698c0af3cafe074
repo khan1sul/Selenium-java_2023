@@ -1,0 +1,17 @@
+package utility;
+
+import org.openqa.selenium.JavascriptException;
+import org.openqa.selenium.WebElement;
+import test.BaseTest;
+
+public class UtilityMethods {
+	
+	public static void jsClick(WebElement element) {
+		
+		JavascriptException js =(JavascriptException)BaseTest.driver;
+		js.executeScript("argument[0].click();",element);
+		
+	}
+	
+
+}

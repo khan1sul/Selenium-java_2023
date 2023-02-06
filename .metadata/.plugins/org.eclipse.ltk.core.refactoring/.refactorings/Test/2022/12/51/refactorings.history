@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;WebDriverBasics.java&apos; to &apos;target&apos;&#x0D;&#x0A;- Original project: &apos;Test&apos;&#x0D;&#x0A;- Destination element: &apos;target&apos;&#x0D;&#x0A;- Original element: &apos;SeleniumTrainingSession.WebDriverBasics.java&apos;" description="Copy compilation unit" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;SeleniumTrainingSession{WebDriverBasics.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1671034674899" target="/mavenproject/target" units="1" version="1.0"/>
+</session>
